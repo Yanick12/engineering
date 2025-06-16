@@ -1,0 +1,606 @@
+@import 'bulma/css/bulma.css';/* Style normal */
+/* Padding-top obligatoire pour que le contenu ne soit pas caché sous la navbar fixe */
+body {
+  padding-top: 3.25rem; /* hauteur standard navbar Bulma */
+  margin: 0;
+}
+
+/* Transition et shadow sur la navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease,  box-shadow 0.3s ease;
+  z-index: 1000; /* pour que la navbar soit au-dessus de tout */
+  box-shadow: none;
+}
+
+/* Ajout d’un fond translucide et shadow après scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+/* Centrer les items de navigation */
+/*.navbar-center {*/
+  /*position: absolute;*/
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+  /*display: flex;
+  align-items: center;
+  gap: 2rem; /* espace entre les liens */
+  /*height: 100%;
+}/*
+
+/* Empêche le dropdown de sortir brutalement */
+.custom-dropdown .navbar-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Affiche le dropdown au hover */
+.custom-dropdown:hover .navbar-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Style des items du dropdown */
+.custom-dropdown .navbar-item {
+  padding: 0.75rem 1.2rem;
+}
+
+/* Garde les liens cliquables */
+.custom-dropdown .navbar-item:hover {
+  background-color: #f5f5f5;
+}
+/* Centrage des éléments de menu */
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 1.5rem;
+}
+
+/* Permet de prendre l’espace disponible */
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+.contact-help {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.help-button {
+  background-color: #3273dc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.help-popup {
+  position: absolute;
+  bottom: 4rem;
+  right: 0;
+  width: 250px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 1rem;
+}
+
+/** image de hero   **/
+
+.flx-hero-hp {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
+}
+
+.mask {
+  display: inline-block;
+  overflow: hidden;
+  height: 3rem;
+  vertical-align: bottom;
+}
+
+.mask span {
+  display: block;
+  animation: fade 0.5s ease-in-out;
+}
+
+/* Animation simple */
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*   animation de mon ratatinText */
+
+.rotating-container {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.2em; /* Hauteur d’une phrase, à ajuster si besoin */
+  vertical-align: bottom; /* pour aligner avec "Moving " */
+}
+
+.rotating-text {
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotating-text span {
+  display: block;
+  height: 1.2em; /* même hauteur que le container */
+  line-height: 1.2em; /* pour aligner verticalement */
+}
+
+#flex-1 {
+  height: 100vh; /* pleine hauteur de la fenêtre */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center; /* centre verticalement */
+  background-color: #121212; /* optionnel, fond sombre pour contraste */
+}
+
+#flex-1 .wrapper {
+  text-align: center;
+}
+
+#flex-1 h1 {
+  font-size: 4rem; /* gros caractère */
+  font-weight: 900;
+  color: #fff; /* texte blanc */
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+#flex-1 .rotating-text span {
+  display: block; /* chaque phrase sur une ligne */
+  height: 1.2em; /* hauteur d’une ligne */
+  line-height: 1.2em;
+}
+
+/*   partie de mon message video dessus */
+
+
+.text-moving-container {
+  margin-bottom: 3rem;
+}
+
+.video-message-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  overflow: hidden;
+  text-align: center;
+  max-width: 100%;
+}
+
+.hero-video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(0.85); /* pour un rendu doux */
+}
+
+.video-message {
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.text-video-wrapper {
+  max-width: 1100px; /* un peu plus grand que 656 + 366 */
+  margin: 3rem auto 5rem auto;
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 1rem 2rem;
+  gap: 2rem;
+  min-height: 575px; /* correspond au div.text hauteur */
+}
+
+/* Bloc texte à gauche */
+.text {
+  width: 656px;
+  height: 575px;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/* Le paragraphe à l’intérieur du texte */
+.text p {
+  width: 474px;
+  height: 140px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Wrapper de la vidéo à droite */
+.videowrapper {
+  width: 366px;
+  height: 505px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* La vidéo */
+.hero-video {
+  width: 369.65px; /* largeur un peu plus large que wrapper pour débord léger */
+  height: 510.05px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+
+/* mise a jour du css*/
+
+@import 'bulma/css/bulma.css';
+
+/* === GLOBAL STYLES === */
+body {
+  padding-top: 3.25rem; /* hauteur navbar fixe */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* === NAVBAR === */
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.navbar-center {
+  margin: 0 auto;
+}
+
+/* === HERO TEXT MOVING === */
+.flx-hero-hp {
+  position: relative;
+  padding: 6rem 1rem;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flx-hero-hp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.flx-hero-hp h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+  line-height: 1.2;
+}
+
+/* === VIDÉO + TEXTE WRAPPER === */
+.video-message-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 4rem auto;
+  flex-wrap: wrap;
+}
+
+.video-message-text {
+  width: 656px;
+  height: 575px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-message-text .text-container {
+  width: 474px;
+  height: 140px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #222;
+}
+
+.video-wrapper,
+.video-message-container {
+  width: 366px;
+  height: 505px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* === SECTIONS === */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.columns.is-centered .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === HELP BUTTON === */
+.contact-help {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.help-button {
+  background-color: #3273dc;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.help-popup {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  max-width: 280px;
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #003366;
+}
+
+.section:nth-child(even) {
+  background-color: #f4f6f8; /* gris très clair */
+}
+
+.button.is-primary {
+  background-color: #003366;
+  border: none;
+  color: #fff;
+}
+
+.button.is-primary:hover {
+  background-color: #0054a6;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-video {
+    height: 200px !important;
+    object-fit: cover;
+  }
+
+  .navbar-menu {
+    justify-content: center;
+  }
+
+  .section h2.title {
+    font-size: 1.5rem;
+  }
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 0 transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-hover img {
+  transition: transform 0.4s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.05);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.vision-img-wrapper img {
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.vision-img-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #003366;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.location-img-wrapper img {
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+/* partie de services*/
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/*   page du service*/
+
+
+
+.subtitle.is-5 {
+  color: #555;
+  line-height: 1.7;
+}
+
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+.box {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
