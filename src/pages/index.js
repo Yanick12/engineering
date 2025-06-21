@@ -1,67 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-
-
-//import HeroCarousel from '../components/HeroCarousel';
-
-// === Composant pour le texte animé "Moving ..."
-//const RotatingText = () => {
-//  const phrases = [
-//    "Un interlocuteur permettant une maitrise globale des prestation.",
-//    "Un partenaire indique pour une maitrise globale du projet.",
-//    "Votre metier est de produire, le notre est de vous y assister.",
-    
-//  ];
-
-//  const [index, setIndex] = useState(0);
-
-//  useEffect(() => {
-//    const timer = setInterval(() => {
-//      setIndex((prev) => (prev + 1) % phrases.length);
-//    }, 2000);
-//    return () => clearInterval(timer);
-//  }, );
-
-//  return (
-
-    
-//    <section
-    
-//      className="flx flx-hero-hp"
-//     // style={{ backgroundImage: 'url("/images/logos.png")' }}
-//    >
-//      <h1>
-//        <span>Solutum,</span>
-//        <span style={{ overflow: 'hidden', height: '3.6rem', position: 'relative' }}>
-//          <span
-//            style={{
-//              display: 'block',
-//              transition: 'transform 0.5s ease-in-out',
-//              transform: `translateY(-${index * 3.6}rem)`,
-//              lineHeight: '3.6rem',
-//            }}
-//          >
-//            {phrases.map((phrase, i) => (
-//              <span key={i} style={{ display: 'block', height: '3.6rem' }}>
-//                {phrase}
-//              </span>
-//            ))}
-//          </span>
-//        </span>
-//      </h1>
-//    </section>
-//  );
-//};
-
-
-
-
 function Counter({ end, duration }) {
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     let start = 0;
     const totalFrames = duration / 16;
@@ -118,13 +62,9 @@ export default function HomePage() {
         <title>Accueil - Solutum Engineering</title>
         <meta name="description" content="Solutum Engineering : ingénierie, automatisme, formation et solutions industrielles innovantes." />
       </Head>
-      {/*<HeroCarousel/>*/}
-
-      {/* === Navbar === */}
 
       <Navbar/>
       
-
       {/* === Section Hero === */}
 
       {/* Vidéo fixe en fond */}
@@ -175,9 +115,6 @@ export default function HomePage() {
         }
       `}</style>
 
-      {/*<HeroCarousel/>*/}
-      {/*<RotatingText />*/}
-
       {/* === Introduction simple === */}
 <section className="section has-background-white py-6">
   <div className="container has-text-centered">
@@ -199,7 +136,15 @@ export default function HomePage() {
           <div className="card service-card fade-in">
             <div className="card-image image-hover">
               <figure className="image is-4by3">
-                <img src={service.image} alt={service.title} />
+
+
+                  <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={640} 
+                  height={480} 
+                  />
+
               </figure>
             </div>
             <div className="card-content has-text-centered">
@@ -266,7 +211,16 @@ export default function HomePage() {
       {/* Illustration ou photo technique */}
       <div className="column is-6">
         <figure className="image is-4by3 vision-img-wrapper">
-          <img src="/images/gestion_de_projet/nosMission1.jpg" alt="Vision industrielle" />
+          
+
+        <Image
+            src="/images/gestion_de_projet/nosMission1.jpg"
+  alt="Vision industrielle"
+  width={800} // remplace par la largeur réelle ou souhaitée
+  height={600} // idem pour la hauteur
+  layout="responsive" // pour qu’elle s’adapte au conteneur
+        />
+
         </figure>
       </div>
 
@@ -398,7 +352,16 @@ export default function HomePage() {
       {/* Carte ou illustration */}
       <div className="column is-6">
         <figure className="image is-4by3 location-img-wrapper">
-          <img src="/images/nos_mission/image19.jpg" alt="Carte des implantations de Solutum" style={{borderRadius: '8px'}} />
+          
+
+          <Image
+               src="/images/nos_mission/image19.jpg"
+  alt="Carte des implantations de Solutum"
+  width={800}         // Remplace par la largeur réelle ou souhaitée
+  height={600}        // Idem pour la hauteur
+                style={{ borderRadius: '8px' }}
+          />
+
         </figure>
       </div>
 
@@ -426,7 +389,17 @@ export default function HomePage() {
       {/* Carte ou illustration */}
       <div className="column is-6">
         <figure className="image is-4by3 location-img-wrapper">
-          <img src="/images/nos_mission/image19.jpg" alt="Carte des implantations de Solutum" style={{borderRadius: '8px'}} />
+          
+
+          <Image
+                  src="/images/nos_mission/image19.jpg"
+  alt="Carte des implantations de Solutum"
+  width={800} // Remplace par les dimensions réelles de l’image
+  height={600}
+  style={{ borderRadius: '8px' }}
+  priority // Pour les images importantes comme celle-ci
+          />
+
         </figure>
       </div>
 
