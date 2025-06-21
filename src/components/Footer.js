@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="columns is-multiline">
           {/* Colonne 1 */}
           <div className="column is-12-mobile is-4-desktop mb-4">
-            <h3 className="title is-6 has-text-white">L'entreprise</h3>
+            <h3 className="title is-6 has-text-white">L&#39;entreprise</h3>
             <ul>
               <li><Link href="/" className="has-text-grey-light">À propos</Link></li>
               <li><Link href="/" className="has-text-grey-light">Nos projets</Link></li>
