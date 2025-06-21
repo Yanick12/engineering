@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
@@ -36,9 +37,18 @@ export default function Automatisme() {
             </div>
 
             <div className="column is-half">
-              <figure className="image is-4by3">
-                <img src="/images/services/automatisme.jpg" alt="Supervision et automatisation" style={{ borderRadius: '8px' }} />
-              </figure>
+              
+
+<figure className="image is-4by3" style={{ position: 'relative' }}>
+  <Image
+    src="/images/services/automatisme.jpg"
+    alt="Supervision et automatisation"
+    fill
+    style={{ borderRadius: '8px', objectFit: 'cover' }}
+    sizes="(max-width: 768px) 100vw, 768px"
+  />
+</figure>
+
             </div>
           </div>
         </div>

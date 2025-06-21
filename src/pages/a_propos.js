@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
@@ -27,9 +28,18 @@ export default function AproposPage() {
             </div>
 
             <div className="column is-6">
-              <figure className="image is-4by3">
-                <img src="/images/team.jpg" alt="Équipe Solutum Engineering" style={{ borderRadius: '8px' }} />
-              </figure>
+             
+
+<figure className="image is-4by3" style={{ position: 'relative' }}>
+  <Image
+    src="/images/team.jpg"
+    alt="Équipe Solutum Engineering"
+    fill
+    style={{ borderRadius: '8px', objectFit: 'cover' }}
+    sizes="(max-width: 768px) 100vw, 768px"
+  />
+</figure>
+
             </div>
           </div>
         </div>

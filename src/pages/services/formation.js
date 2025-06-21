@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../../components/Navbar'
 
 import Footer from '../../components/Footer'
@@ -38,9 +39,18 @@ export default function FormationTechnique() {
             </div>
 
             <div className="column is-half">
-              <figure className="image is-4by3">
-                <img src="/images/formation/image26.jpg" alt="Formation technique Solutum" style={{ borderRadius: '8px' }} />
-              </figure>
+              
+
+<figure className="image is-4by3" style={{ position: 'relative' }}>
+  <Image
+    src="/images/formation/image26.jpg"
+    alt="Formation technique Solutum"
+    fill
+    style={{ borderRadius: '8px', objectFit: 'cover' }}
+    sizes="(max-width: 768px) 100vw, 768px"
+  />
+</figure>
+
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 // pages/services.js
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -64,9 +65,19 @@ export default function ServicesPage() {
               <div key={index} className="column is-6-tablet is-4-desktop">
                 <div className="card service-card">
                   <div className="card-image">
-                    <figure className="image is-4by3">
-                      <img src={service.image} alt={service.title} />
-                    </figure>
+                    
+
+<figure className="image is-4by3" style={{ position: 'relative', width: '100%', height: 0, paddingBottom: '75%' }}>
+  <Image
+    src={service.image}
+    alt={service.title}
+    fill
+    style={{ objectFit: 'cover' }}
+    sizes="(max-width: 768px) 100vw, 768px"
+    priority={true} // optionnel, si tu veux charger l'image en priorité
+  />
+</figure>
+
                   </div>
                   <div className="card-content">
                     <h3 className="title is-5">{service.title}</h3>
