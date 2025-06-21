@@ -1,6 +1,7 @@
 // pages/services.js
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function ServicesPage() {
@@ -8,37 +9,37 @@ export default function ServicesPage() {
     {
       title: 'Montage industriel',
       description: "Installation et mise en service d’équipements industriels adaptés à vos besoins.",
-      image: '/images/services/montage.jpg',
+      image: '/images/montage/image4.jpg',
       link: '/services/montage'
     },
     {
       title: 'Supervision & automatisation',
       description: "Conception de systèmes automatisés, contrôle/commande et interfaces homme-machine.",
-      image: '/images/services/automatisme.jpg',
+      image: '/images/etude_realisation/image6.jpg',
       link: '/services/automatisme'
     },
     {
       title: 'Gestion de projet',
       description: "Méthodologie de pilotage pour garantir le respect des délais, coûts et qualité.",
-      image: '/images/services/gestion.jpg',
+      image: '/images/gestion_de_projet/nosMission1.jpg',
       link: '/services/projets'
     },
     {
       title: 'Formation technique',
       description: "Formations sur mesure pour les ingénieurs, techniciens et opérateurs industriels.",
-      image: '/images/services/formation.jpg',
+      image: '/images/formation/image26.jpg',
       link: '/services/formation'
     },
     {
       title: 'Infogérance & assistance',
       description: "Soutien technique et maintenance pour vos infrastructures et réseaux industriels.",
-      image: '/images/services/infogerance.jpg',
+      image: '/images/aspect_pratique/etude2.jpg',
       link: '/services/infogerance'
     },
     {
       title: 'Conseil & études',
       description: "Études de faisabilité, audits techniques, diagnostics industriels.",
-      image: '/images/services/conseil.jpg',
+      image: '/images/etudes/image10.jpg',
       link: '/services/conseil'
     }
   ]
@@ -48,6 +49,8 @@ export default function ServicesPage() {
       <Head>
         <title>Nos Services - Solutum Engineering</title>
       </Head>
+
+      <Navbar/>
 
       <section className="section has-background-white">
         <div className="container">

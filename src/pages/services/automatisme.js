@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
 export default function Automatisme() {
@@ -8,6 +9,7 @@ export default function Automatisme() {
       <Head>
         <title>Supervision & Automatisation - Solutum Engineering</title>
       </Head>
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">

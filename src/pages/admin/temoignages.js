@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 export default function AdminTemoignages() {
   const [temoignages, setTemoignages] = useState([
@@ -39,6 +41,7 @@ export default function AdminTemoignages() {
       <Head>
         <title>Admin - Témoignages</title>
       </Head>
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">
@@ -92,6 +95,8 @@ export default function AdminTemoignages() {
           <Link href="/admin" className="button is-light mt-5">← Retour au tableau de bord</Link>
         </div>
       </section>
+
+      <Footer/>
     </>
   )
 }

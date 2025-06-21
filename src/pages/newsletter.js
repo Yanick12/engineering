@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
@@ -46,6 +48,8 @@ export default function NewsletterPage() {
         <title>Inscription Newsletter - Solutum Engineering</title>
       </Head>
 
+      <Navbar/>
+
       <section className="section">
         <div className="container">
           <h1 className="title">Recevez nos actualités</h1>
@@ -82,6 +86,8 @@ export default function NewsletterPage() {
           </form>
         </div>
       </section>
+
+      <Footer/>
     </>
   );
 }

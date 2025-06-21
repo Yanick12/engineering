@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from '../../components/Navbar'
+
 import Footer from '../../components/Footer'
 
 export default function FormationTechnique() {
@@ -8,6 +10,8 @@ export default function FormationTechnique() {
       <Head>
         <title>Formation Technique - Solutum Engineering</title>
       </Head>
+
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">
@@ -35,7 +39,7 @@ export default function FormationTechnique() {
 
             <div className="column is-half">
               <figure className="image is-4by3">
-                <img src="/images/services/formation.jpg" alt="Formation technique Solutum" style={{ borderRadius: '8px' }} />
+                <img src="/images/formation/image26.jpg" alt="Formation technique Solutum" style={{ borderRadius: '8px' }} />
               </figure>
             </div>
           </div>

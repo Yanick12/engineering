@@ -6,7 +6,7 @@ const adminEmail = 'admin@solutum.com'
 // Hash bcrypt du mot de passe "admin123"
 const hashedPassword = '$2b$10$9F1TEI3KHkjHyat8biCE3eCDGaXW7Jr/8nGHRLPyUUNB5VcmFoTqi'
 
-export default async function handler(req, res) {
+export default async function handler(req, res) {``
   if (req.method !== 'POST') return res.status(405).json({ message: 'Méthode non autorisée' })
 
   const { email, password } = req.body
@@ -21,7 +21,7 @@ console.log('Mot de passe reçu:', password)
   }
 
   // Vérification mot de passe
-  const isMatch = await bcrypt.compare(password, hashedPassword)
+  //const isMatch = await bcrypt.compare(password, hashedPassword)
   if (!isMatch) {
     return res.status(401).json({ message: 'Mot de passe incorrect' })
   }

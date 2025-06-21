@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
 import { useState } from 'react'
+import Navbar from '../components/Navbar'
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -21,6 +22,7 @@ export default function ContactPage() {
       <Head>
         <title>Contact - Solutum Engineering</title>
       </Head>
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">

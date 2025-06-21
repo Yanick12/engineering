@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from '../../components/Navbar'
+
 import Footer from '../../components/Footer'
 
 export default function Conseil() {
@@ -8,6 +10,8 @@ export default function Conseil() {
       <Head>
         <title>Conseil & Études - Solutum Engineering</title>
       </Head>
+
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">
@@ -35,7 +39,7 @@ export default function Conseil() {
 
             <div className="column is-half">
               <figure className="image is-4by3">
-                <img src="/images/services/conseil.jpg" alt="Conseil technique" style={{ borderRadius: '8px' }} />
+                <img src="/images/etude_realisation/image5.jpg" alt="Conseil technique" style={{ borderRadius: '8px' }} />
               </figure>
             </div>
           </div>

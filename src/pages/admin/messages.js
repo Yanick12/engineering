@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
 import ConfirmModal from '/src/components/ConfirmModal'  // ajuste chemin si besoin
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 export default function AdminMessages() {
   const [messages, setMessages] = useState([
@@ -39,6 +41,8 @@ export default function AdminMessages() {
           referrerPolicy="no-referrer"
         />
       </Head>
+
+      <Navbar/>
 
       <section className="section" style={{ backgroundColor: '#0f111a', minHeight: '100vh', color: '#e4e6eb' }}>
         <div className="container" style={{ maxWidth: '960px' }}>
@@ -163,6 +167,8 @@ export default function AdminMessages() {
           message="Souhaitez-vous vraiment supprimer ce message ? Cette action est irréversible."
         />
       </section>
+
+      <Footer/>
     </>
   )
 }

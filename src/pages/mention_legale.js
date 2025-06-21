@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 export default function MentionsLegales() {
   return (
@@ -7,6 +8,7 @@ export default function MentionsLegales() {
       <Head>
         <title>Mentions légales - Solutum Engineering</title>
       </Head>
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container content">
@@ -15,9 +17,15 @@ export default function MentionsLegales() {
           <h2 className="title is-5">Éditeur du site</h2>
           <p>
             <strong>Solutum Engineering</strong><br />
-            Siège social : Ngaoundéré, Cameroun<br />
-            Téléphone : +237 698 08 21 30<br />
-            Email : contact@solutum-engineering.com
+           
+             📍 Douala Bonamoussadi (face écoles publique), Cameroun<br />
+              📞 +237 620 793 700<br />
+              📞 +237 699 599 682<br />
+              📞 +237 682 475 341<br />
+              ✉️ bitjokalaurent@gmail.com
+              📞 +237 697 168 853<br />
+              📞 +237 679 979 600<br />
+              ✉️ ecstundents06@yahoo.fr
           </p>
 
           <h2 className="title is-5">Responsable de publication</h2>
@@ -51,7 +59,7 @@ export default function MentionsLegales() {
           </p>
 
           <h2 className="title is-5">Contact</h2>
-          <p>Pour toute question, veuillez nous contacter à l&#39;adresse : <strong>contact@solutum-engineering.com</strong></p>
+          <p>Pour toute question, veuillez nous contacter à l&#39;adresse : <strong><a href="ecstundents06@yahoo.fr" target="_blank" rel="noreferrer">ecstundents06@yahoo.fr</a></strong></p>
         </div>
       </section>
 

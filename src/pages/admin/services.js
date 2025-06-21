@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+
 
 export default function AdminServices() {
   const [services, setServices] = useState([
@@ -43,6 +46,7 @@ export default function AdminServices() {
       <Head>
         <title>Admin - Gérer les services</title>
       </Head>
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">
@@ -88,6 +92,8 @@ export default function AdminServices() {
           <Link href="/admin" className="button is-light mt-5">← Retour au tableau de bord</Link>
         </div>
       </section>
+
+      <Footer/>
     </>
   )
 }

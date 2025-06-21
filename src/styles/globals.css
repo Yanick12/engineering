@@ -72,7 +72,7 @@ body {
 /* Permet de prendre l’espace disponible */
 .navbar-menu {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
   width: 100%;
 }
@@ -562,6 +562,7 @@ h1, h2, h3 {
   to {
     opacity: 1;
     transform: none;
+    transform: translateY(0);
   }
 }
 
@@ -603,4 +604,24 @@ h1, h2, h3 {
 .box {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.first-content-over-hero {
+  position: relative;
+  z-index: 2;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

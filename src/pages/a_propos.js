@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 export default function AproposPage() {
   return (
@@ -7,6 +8,8 @@ export default function AproposPage() {
       <Head>
         <title>À propos - Solutum Engineering</title>
       </Head>
+
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">

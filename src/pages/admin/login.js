@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 export default function AdminLogin() {
   const router = useRouter()
@@ -20,7 +22,7 @@ export default function AdminLogin() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials:'include',
-      body: JSON.stringify({ email: form.email, password: form.password }) // <-- correction ici
+      body: JSON.stringify({ email: form.email, password: form.password })
     })
 
     console.log('Status:', res.status)
@@ -42,6 +44,8 @@ export default function AdminLogin() {
       <Head>
         <title>Connexion Admin - Solutum Engineering</title>
       </Head>
+
+      <Navbar/>
 
       <section className="section has-background-light" style={{ minHeight: '100vh' }}>
         <div className="container" style={{ maxWidth: '400px', marginTop: '5rem' }}>
@@ -72,6 +76,7 @@ export default function AdminLogin() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

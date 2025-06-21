@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
 export default function MontageIndustriel() {
@@ -8,6 +9,7 @@ export default function MontageIndustriel() {
       <Head>
         <title>Montage Industriel - Solutum Engineering</title>
       </Head>
+      <Navbar/>
 
       <section className="section has-background-white py-6">
         <div className="container">
@@ -35,7 +37,7 @@ export default function MontageIndustriel() {
 
             <div className="column is-half">
               <figure className="image is-4by3">
-                <img src="/images/services/montage.jpg" alt="Montage industriel Solutum" style={{ borderRadius: '8px' }} />
+                <img src="/images/montage/image3.jpg" alt="Montage industriel Solutum" style={{ borderRadius: '8px' }} />
               </figure>
             </div>
           </div>
