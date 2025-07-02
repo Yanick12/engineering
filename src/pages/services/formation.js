@@ -30,7 +30,7 @@ export default function FormationTechnique() {
           <div className="columns is-vcentered is-variable is-6">
             <div className="column is-half">
               <p className="content is-medium">
-                Solutum Engineering propose des formations pratiques dans plusieurs domaines de l&#39;ingénierie :
+                Solutum Engineering propose des formations pratiques dans plusieurs domaines en ingénierie :
                 électricité industrielle, automatisme, instrumentation, supervision, sécurité des systèmes.
               </p>
               <h2 className="subtitle mt-5">Nos domaines de formation :</h2>
