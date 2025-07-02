@@ -36,10 +36,10 @@ export default function FormationTechnique() {
               <h2 className="subtitle mt-5">Nos domaines de formation :</h2>
               <ul className="content">
               <li><strong>✔ La conception (CAO, DAO, MCN) :</strong> AutoCAD, Solidworks, Catia, etc.</li>
-              <li><strong>✔ L'analyse vibratoire</strong></li>
+              <li><strong>✔ Analyse vibratoire</strong></li>
               <li><strong>✔ La maintenance industrielle</strong></li>
               <li><strong>✔ Les technologies avancées</strong></li>
-              <li><strong>✔ L'automation industrielle</strong></li>
+              <li><strong>✔ Automation industrielle</strong></li>
               <li><strong>✔ La méthode de résolution de problèmes inventifs (TRIZ) et innovation</strong></li>
                 <li>✔ Formations inter-entreprises et sur site</li>
                 <li>✔ Supports pédagogiques fournis</li>
