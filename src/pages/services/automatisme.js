@@ -41,7 +41,7 @@ export default function Automatisme() {
 
 <figure className="image is-4by3" style={{ position: 'relative' }}>
   <Image
-    src="/images/services/automatisme.jpg"
+    src="/images/instrument_reaseaux_industriels/image13.jpg"
     alt="Supervision et automatisation"
     fill
     style={{ borderRadius: '8px', objectFit: 'cover' }}

@@ -17,9 +17,15 @@ export default function FormationTechnique() {
       <section className="section has-background-white py-6">
         <div className="container">
           <h1 className="title is-3 has-text-primary mb-4">Formation technique</h1>
-          <p className="subtitle is-5 mb-5">
-            Nous formons les ingénieurs, techniciens et opérateurs aux technologies industrielles de demain.
-          </p>
+          <div className="content is-medium" style={{ maxWidth: '800px', margin: '0 auto' }}>
+            
+            
+            <ul>
+             
+            </ul>
+
+          
+          </div>
 
           <div className="columns is-vcentered is-variable is-6">
             <div className="column is-half">
@@ -27,14 +33,26 @@ export default function FormationTechnique() {
                 Solutum Engineering propose des formations pratiques dans plusieurs domaines de l&#39;ingénierie :
                 électricité industrielle, automatisme, instrumentation, supervision, sécurité des systèmes.
               </p>
+              <h2 className="subtitle mt-5">Nos domaines de formation :</h2>
               <ul className="content">
+              <li><strong>✔ La conception (CAO, DAO, MCN) :</strong> AutoCAD, Solidworks, Catia, etc.</li>
+              <li><strong>✔ L'analyse vibratoire</strong></li>
+              <li><strong>✔ La maintenance industrielle</strong></li>
+              <li><strong>✔ Les technologies avancées</strong></li>
+              <li><strong>✔ L'automation industrielle</strong></li>
+              <li><strong>✔ La méthode de résolution de problèmes inventifs (TRIZ) et innovation</strong></li>
                 <li>✔ Formations inter-entreprises et sur site</li>
                 <li>✔ Supports pédagogiques fournis</li>
                 <li>✔ Sessions orientées pratique et cas réels</li>
                 <li>✔ Évaluation & attestation de participation</li>
               </ul>
-              <Link href="/contact" className="button is-primary is-medium mt-4">
-                Contacter notre service formation
+
+              <p><strong>
+              Développer les capacités du personnel (savoir, savoir-faire et savoir-être).</strong>
+            </p>
+
+              <Link href="#" className="button is-primary is-medium mt-4">
+                Voir plus
               </Link>
             </div>
 

@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-
 export default function AproposPage() {
   return (
     <>
@@ -30,15 +29,15 @@ export default function AproposPage() {
             <div className="column is-6">
              
 
-<figure className="image is-4by3" style={{ position: 'relative' }}>
+         <figure className="image is-4by3" style={{ position: 'relative' }}>
   <Image
-    src="/images/team.jpg"
+    src="/images/gestion_de_projet/nosMission1.jpg"
     alt="Équipe Solutum Engineering"
     fill
     style={{ borderRadius: '8px', objectFit: 'cover' }}
     sizes="(max-width: 768px) 100vw, 768px"
   />
-</figure>
+         </figure>
 
             </div>
           </div>
@@ -85,7 +84,7 @@ export default function AproposPage() {
       {/* Historique ou chiffres (optionnel) */}
       <section className="section py-6">
         <div className="container has-text-centered">
-          <h2 className="title is-4 mb-4">+15 ans d’expérience industrielle</h2>
+          <h2 className="title is-4 mb-4">+10 ans d’expérience industrielle</h2>
           <p className="subtitle is-6">Solutum Engineering, un acteur de référence au service de l’innovation et de la performance industrielle au Cameroun.</p>
         </div>
       </section>

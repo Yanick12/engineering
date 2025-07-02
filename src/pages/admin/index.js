@@ -1,18 +1,12 @@
 // pages/admin/index.js
 import Head from 'next/head'
 import Link from 'next/link'
+import { getSession } from 'next-auth/react'
 
-import { parse } from 'cookie'
-import jwt from 'jsonwebtoken'
+export async function getServerSideProps(context) {
+  const session = await getSession(context)
 
-export async function getServerSideProps({ req }) {
-  const cookies = parse(req.headers.cookie || '')
-  const token = cookies.auth || null
-
-  try {
-    jwt.verify(token, process.env.JWT_SECRET || 'solutumSecret')
-    return { props: {} }
-  } catch {
+  if (!session) {
     return {
       redirect: {
         destination: '/admin/login',
@@ -20,10 +14,13 @@ export async function getServerSideProps({ req }) {
       }
     }
   }
+
+  return {
+    props: { session }
+  }
 }
 
-
-export default function AdminDashboard() {
+export default function AdminDashboard({ session }) {
   return (
     <>
       <Head>
@@ -32,7 +29,10 @@ export default function AdminDashboard() {
 
       <section className="section has-background-light min-vh-100">
         <div className="container">
-          <h1 className="title is-3 has-text-centered has-text-primary">Tableau de bord administrateur</h1>
+          <h1 className="title is-3 has-text-centered has-text-primary">
+            Bienvenue, {session.user.email}
+          </h1>
+
           <div className="columns is-multiline is-variable is-5 mt-6">
             <div className="column is-4">
               <div className="box has-text-centered">
@@ -41,6 +41,7 @@ export default function AdminDashboard() {
                 <Link href="/admin/services" className="button is-link is-small mt-3">Accéder</Link>
               </div>
             </div>
+
             <div className="column is-4">
               <div className="box has-text-centered">
                 <h2 className="title is-5 mb-2">Témoignages</h2>
@@ -48,6 +49,7 @@ export default function AdminDashboard() {
                 <Link href="/admin/temoignages" className="button is-link is-small mt-3">Accéder</Link>
               </div>
             </div>
+
             <div className="column is-4">
               <div className="box has-text-centered">
                 <h2 className="title is-5 mb-2">Messages</h2>
@@ -56,20 +58,20 @@ export default function AdminDashboard() {
               </div>
             </div>
           </div>
+
+          <div className="has-text-centered mt-6">
+            <button
+              className="button is-danger is-light"
+              onClick={async () => {
+                await fetch('/api/auth/signout')
+                window.location.href = '/admin/login'
+              }}
+            >
+              Se déconnecter
+            </button>
+          </div>
         </div>
       </section>
-
-
-      <button
-  className="button is-danger is-light mt-5"
-  onClick={async () => {
-    await fetch('/api/logout')
-    window.location.href = '/admin/login'
-  }}
->
-  Se déconnecter
-</button>
-
     </>
   )
 }

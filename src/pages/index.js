@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import AssistanceBot from '../components/AssistanceBot';
 function Counter({ end, duration }) {
   const [count, setCount] = useState(0);
   useEffect(() => {
     let start = 0;
     const totalFrames = duration / 16;
     const increment = end / totalFrames;
-
     const timer = setInterval(() => {
       start += increment;
       if (start >= end) {
@@ -20,20 +20,16 @@ function Counter({ end, duration }) {
         setCount(Math.ceil(start));
       }
     }, 16);
-
     return () => clearInterval(timer);
   }, [end, duration]);
-
   return (
     <p className="title is-1 has-text-primary" style={{ fontSize: '3rem' }}>
       {count}+
     </p>
   );
 }
-
 export default function HomePage() {
   const [showPopup, setShowPopup] = useState(false);
-
   // Scroll navbar effet
   useEffect(() => {
     const handleScroll = () => {
@@ -47,26 +43,19 @@ export default function HomePage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
-
   const services = [
     { title: "Montage industriel", image: "/images/montage/image3.jpg", link: "/services/montage" },
     { title: "Gestion de projet", image: "/images/gestion_de_projet/nosMission1.jpg", link: "/services/projet" },
     { title: "Supervision & contrôle", image: "/images/montage/image4.jpg", link: "/services/supervision" },
     { title: "Formation", image: "/images/formation/image27.jpg", link: "/services/formation" }
   ];
-
   return (
     <>
       <Head>
-        <title>Accueil - Solutum Engineering</title>
+        <title>Solutum Engineering</title>
         <meta name="description" content="Solutum Engineering : ingénierie, automatisme, formation et solutions industrielles innovantes." />
       </Head>
-
       <Navbar/>
-      
-      {/* === Section Hero === */}
-
       {/* Vidéo fixe en fond */}
       <video
         className="hero-video"
@@ -77,23 +66,28 @@ export default function HomePage() {
         preload="auto"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
-        
       </video>
-
       {/* Contenu de la page */}
       <section className="hero is-fullheight">
         <div className="hero-body">
           <div className="container has-text-centered has-text-white">
-            <h1 className="title is-size-1-desktop is-size-3-tablet is-size-4-mobile">
-              L&#39;ingénierie au service de vos projets
-            </h1>
-            <button className="button is-primary is-medium mt-5">
-              Demandez une consultation
+            
+           <h1
+  className="title is-size-1-desktop is-size-3-tablet is-size-4-mobile flex-1/2"
+  style={{ color: '#ffffff' }}
+>
+  L&#39;ingénierie au service de vos projets
+</h1>
+
+            <button className="button is-primary is-large is-medium mt-5">
+              <Link href="/contact" className="button is-primary ">
+                Demandez une consultation
+              </Link>
             </button>
+            
           </div>
         </div>
       </section>
-
       <style jsx>{`
         .hero-video-fixed {
           position: fixed;
@@ -115,36 +109,24 @@ export default function HomePage() {
         }
       `}</style>
 
-      {/* === Introduction simple === */}
-<section className="section has-background-white py-6">
-  <div className="container has-text-centered">
-    <h2 className="title is-4 has-text-grey-dark" style={{ maxWidth: "700px", margin: "0 auto" }}>
-      Solutum Engineering vous accompagne dans la transformation industrielle avec des solutions techniques novatrices, flexibles et durables.
-    </h2>
-  </div>
-</section>
 <section className="section has-background-light pt-6 pb-6">
   <div className="container">
     <h2 className="section-title mb-4">Nos domaines d’expertise</h2>
     <p className="has-text-centered mb-6" style={{ maxWidth: '800px', margin: '0 auto' }}>
       Découvrez les compétences techniques de Solutum, déployées à travers l’automatisation, la supervision, le montage industriel et la formation continue.
     </p>
-
     <div className="columns is-multiline is-variable is-6">
       {services.map((service, index) => (
         <div key={index} className="column is-6-tablet is-3-desktop">
           <div className="card service-card fade-in">
             <div className="card-image image-hover">
               <figure className="image is-4by3">
-
-
                   <Image
                   src={service.image}
                   alt={service.title}
                   width={640} 
                   height={480} 
                   />
-
               </figure>
             </div>
             <div className="card-content has-text-centered">
@@ -162,12 +144,10 @@ export default function HomePage() {
 <section className="section has-background-light py-6">
   <div className="container">
     <h2 className="section-title mb-4">Pourquoi choisir Solutum Engineering ?</h2>
-
     <p className="has-text-centered mb-6" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>
       Issue d’une forte expérience du lien entreprise-université, Solutum Engineering offre un accompagnement complet 
       avec des solutions innovantes, fiables et adaptées aux réalités industrielles actuelles.
     </p>
-
     <div className="columns is-variable is-6 is-multiline">
       <div className="column is-6-tablet is-3-desktop has-text-centered fade-in">
         <span className="icon is-large has-text-primary mb-3">
@@ -176,7 +156,6 @@ export default function HomePage() {
         <h3 className="title is-5">Expertise technique</h3>
         <p>Une équipe d’ingénieurs spécialisée dans l’automatisation, la supervision et les solutions industrielles complexes.</p>
       </div>
-
       <div className="column is-6-tablet is-3-desktop has-text-centered fade-in">
         <span className="icon is-large has-text-primary mb-3">
           <i className="fas fa-chalkboard-teacher fa-3x"></i>
@@ -184,7 +163,6 @@ export default function HomePage() {
         <h3 className="title is-5">Transfert de compétences</h3>
         <p>Un fort lien avec les écoles d’ingénieurs et les jeunes talents, avec un rôle actif dans la formation.</p>
       </div>
-
       <div className="column is-6-tablet is-3-desktop has-text-centered fade-in">
         <span className="icon is-large has-text-primary mb-3">
           <i className="fas fa-project-diagram fa-3x"></i>
@@ -192,7 +170,6 @@ export default function HomePage() {
         <h3 className="title is-5">Projets sur mesure</h3>
         <p>Chaque mission est adaptée à vos installations, contraintes techniques et ambitions stratégiques.</p>
       </div>
-
       <div className="column is-6-tablet is-3-desktop has-text-centered fade-in">
         <span className="icon is-large has-text-primary mb-3">
           <i className="fas fa-thumbs-up fa-3x"></i>
@@ -206,13 +183,10 @@ export default function HomePage() {
 <section className="section has-background-white py-6">
   <div className="container">
     <h2 className="section-title mb-5">Notre vision</h2>
-
     <div className="columns is-vcentered fade-in">
       {/* Illustration ou photo technique */}
       <div className="column is-6">
         <figure className="image is-4by3 vision-img-wrapper">
-          
-
         <Image
             src="/images/gestion_de_projet/nosMission1.jpg"
   alt="Vision industrielle"
@@ -220,10 +194,8 @@ export default function HomePage() {
   height={600} // idem pour la hauteur
   layout="responsive" // pour qu’elle s’adapte au conteneur
         />
-
         </figure>
       </div>
-
       {/* Texte vision */}
       <div className="column is-6">
         <div className="content is-medium">
@@ -245,8 +217,6 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
-
 <section className="section has-background-white py-6">
   <div className="fade-in">
     <h2 className="title is-3 has-text-centered mb-5">Nos valeurs</h2>
@@ -323,22 +293,22 @@ export default function HomePage() {
 
     <div className="columns is-variable is-8 has-text-centered fade-in">
       <div className="column">
-        <Counter end={15} duration={1500} />
+        <Counter end={15} duration={10000} />
         <p className="heading">Années d’expérience</p>
       </div>
 
       <div className="column">
-        <Counter end={120} duration={1500} />
+        <Counter end={100} duration={35000} />
         <p className="heading">Projets réalisés</p>
       </div>
 
-      <div className="column">
-        <Counter end={50} duration={1500} />
+      <div className="column ">
+        <Counter end={50} duration={40000} />
         <p className="heading">Clients satisfaits</p>
       </div>
 
       <div className="column">
-        <Counter end={24} duration={1500} />
+        <Counter end={24} duration={45000} />
         <p className="heading">Support disponible</p>
       </div>
     </div>
@@ -352,19 +322,9 @@ export default function HomePage() {
       {/* Carte ou illustration */}
       <div className="column is-6">
         <figure className="image is-4by3 location-img-wrapper">
-          
-
-          <Image
-               src="/images/nos_mission/image19.jpg"
-  alt="Carte des implantations de Solutum"
-  width={800}         // Remplace par la largeur réelle ou souhaitée
-  height={600}        // Idem pour la hauteur
-                style={{ borderRadius: '8px' }}
-          />
-
+          <Image src="/images/nos_mission/image19.jpg" alt="Carte des implantations de Solutum" width={800} height={600} style={{ borderRadius: '8px' }}/>
         </figure>
       </div>
-
       {/* Liste des sites */}
       <div className="column is-6">
         <ul className="content is-medium">
@@ -378,44 +338,35 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
-
 {/*    SECTION DES TEMOIGNAGES    */}
 <section className="section has-background-light py-6">
   <div className="container">
     <h2 className="section-title mb-5">Temoignages</h2>
-
     <div className="columns is-vcentered fade-in">
-      {/* Carte ou illustration */}
-      <div className="column is-6">
-        <figure className="image is-4by3 location-img-wrapper">
-          
-
-          <Image
-                  src="/images/nos_mission/image19.jpg"
-  alt="Carte des implantations de Solutum"
-  width={800} // Remplace par les dimensions réelles de l’image
-  height={600}
-  style={{ borderRadius: '8px' }}
-  priority // Pour les images importantes comme celle-ci
-          />
-
-        </figure>
-      </div>
-
+      
       {/* Liste des sites */}
       <div className="column is-6">
         <ul className="content is-medium">
          <p> ici figure les temoignages  </p>
         </ul>
       </div>
+
+      {/* Carte ou illustration */}
+      <div className="column is-6">
+        <figure className="image is-4by3 location-img-wrapper">
+          <Image
+                  src="/images/nos_mission/image19.jpg"
+  alt="Carte des implantations de Solutum"
+  width={800}
+  height={600}
+  style={{ borderRadius: '8px' }}
+  priority
+          />
+        </figure>
+      </div>
     </div>
   </div>
 </section>
-
-
-
-
       {/* === CTA Contact === */}
       <section className="section py-6 has-text-centered">
         <div className="container">
@@ -424,31 +375,10 @@ export default function HomePage() {
           <Link href="/contact" className="button is-primary is-large">
             Nous contacter
           </Link>
-
         </div>
       </section>
-
-      {/* === Aide flottante === */}
-      <div className="contact-help">
-        <button className="help-button" onClick={() => setShowPopup(!showPopup)}>?</button>
-        {showPopup && (
-          <div className="help-popup box">
-            <strong>Contact & Localisation</strong>
-            <p>
-              📍 Douala Bonamoussadi (face écoles publique), Cameroun<br />
-              📞 +237 620 793 700<br />
-              📞 +237 699 599 682<br />
-              📞 +237 682 475 341<br />
-              ✉️ bitjokalaurent@gmail.com
-              📞 +237 697 168 853<br />
-              📞 +237 679 979 600<br />
-              ✉️ ecstundents06@yahoo.fr
-            </p>
-            <button className="button is-small is-light mt-2" onClick={() => setShowPopup(false)}>Fermer</button>
-          </div>
-        )}
-      </div>
-
+      
+      <AssistanceBot/>
       {/* === Footer === */}
       <Footer />
     </>
