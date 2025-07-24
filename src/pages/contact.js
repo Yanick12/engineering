@@ -1,18 +1,37 @@
-import Head from 'next/head'
-import Footer from '../components/Footer'
-import { useState } from 'react'
-import Navbar from '../components/Navbar'
+//import { supabase } from '../lib/supabaseClient'  // adapte le chemin si besoin
+import Head from 'next/head';
+//import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import { supabase } from '../../lib/supabaseClient'
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // envoyer les données vers un backend Node.js ou un service (formspree, nodemailer, etc.)
-    setSubmitted(true)
+    setErrorMsg('')
+    
+    // Insert les données dans Supabase
+    const { error } = await supabase
+      .from('messages')
+      .insert([{ name: form.name, email: form.email, message: form.message }])
+
+    if (error) {
+      console.error('Erreur lors de l\'envoi :', error)
+      setErrorMsg('Une erreur est survenue lors de l\'envoi, veuillez réessayer.')
+    } else {
+      setSubmitted(true)
+      setForm({ name: '', email: '', message: '' })
+    }
   }
+
   return (
     <>
       <Head>
@@ -53,6 +72,8 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {errorMsg && <p className="has-text-danger">{errorMsg}</p>}
+
                   <div className="control">
                     <button className="button is-primary" type="submit">Envoyer</button>
                   </div>
@@ -68,18 +89,27 @@ export default function ContactPage() {
                 <p><strong>Téléphone :</strong> +237 699599682</p>
                 <p><strong>Email :</strong>bitjokalaurent@gmail.com</p>
                 <h2 className="title is-5 mt-5">Localisation</h2>
+                {/* Infos supplémentaires */}
+      <div style={{ flex: '1 1 200px', minWidth: 180 }}>
+        <h3 className="subtitle is-6 has-text-weight-semibold">Adresses spécifiques :</h3>
+        <ul>
+          <li>📍 Douala Bonamoussadi (face école publique)</li>
+          <li>📍 Ngaoundéré (à côté de l'école La Grâce)</li>
+        </ul>
+      </div>
                 
     <div style={{ maxWidth: 800, margin: 'auto', padding: 20 }}>
                 <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.635709587643!2d9.738237274052809!3d4.094331946617687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610e0bcd0fe00f%3A0x27cddf4fc426fff6!2sEcole%20Publique%20de%20bonamoussadi%2C%20Douala!5e0!3m2!1sfr!2scm!4v1751450805890!5m2!1sfr!2scm"
-  width="100%"
-  height="450"
-  style={{ border: 0, borderRadius: '8px' }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
-</div>
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1035.3510056609143!2d9.740730043598896!3d4.0940198293128285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2scm!4v1751541137338!5m2!1sfr!2scm"
+                width="100%"
+                height="450"
+                style={{ border: 0, borderRadius: '8px' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              
+                />
+      </div>
               </div>
             </div>
           </div>

@@ -4,21 +4,21 @@ export default function AssistanceBot() {
   const [showPopup, setShowPopup] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState([
-    { from: 'bot', text: "Bonjour ! Comment puis-je vous aider aujourd'hui ?" }
+    { from: 'bot', text: "Bonjour je suis votre assistance! Comment puis-je vous aider aujourd'hui ?" }
   ]);
   const [input, setInput] = useState('');
 
   const getBotResponse = (text) => {
     const lower = text.toLowerCase();
     if (lower.includes('contact')) {
-      return 'Vous pouvez nous joindre au +237 620 793 700 ou par email à bitjokalaurent@gmail.com.';
+      return 'Vous pouvez nous joindre au numeros suivent:+237 620793700, 699599682, 682475341, +237 620 793 700 ou par email à bitjokalaurent@gmail.com, ecstudents06@gmail.com.';
     } else if (lower.includes('horaire')) {
-      return 'Nos horaires sont du lundi au vendredi, de 8h à 18h.';
+      return 'Nos horaires sont du lundi au vendredi, de 8h à 15h.';
     } else if (lower.includes('adresse') || lower.includes('localisation')) {
-      return 'Nous sommes situés à Douala Bonamoussadi, face aux écoles publiques.';
+      return 'Nous sommes situés à Douala Bonamoussadi, face aux écoles publiques, et a ngaoundere (a cote de l&#39ecole la grace).';
     } else {
       return 'Désolé, je ne comprends pas. Pouvez-vous reformuler votre question ?';
-    }
+    }  
   };
 
   const handleSend = () => {
@@ -48,7 +48,7 @@ export default function AssistanceBot() {
           border-radius: 50%;
           width: 40px;
           height: 40px;
-          font-weight: 700;
+          font-weight: 800;
           font-size: 1.5rem;
           cursor: pointer;
           box-shadow: 0 4px 12px rgba(230, 57, 70, 0.6);

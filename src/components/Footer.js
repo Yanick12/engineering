@@ -15,6 +15,8 @@ export default function Footer() {
               <li><Link href="/" className="has-text-grey-light">Nos projets</Link></li>
               <li><Link href="/" className="has-text-grey-light">Carrière</Link></li>
               <li><Link href="/" className="has-text-grey-light">Partenaires</Link></li>
+              <li><Link href="/blog" className="has-text-grey-light">Blog</Link></li>
+
             </ul>
           </div>
 
@@ -23,7 +25,7 @@ export default function Footer() {
             <h3 className="title is-6 has-text-white">Support & Services</h3>
             <ul>
               <li><Link href="/" className="has-text-grey-light">Conditions générales</Link></li>
-              <li><Link href="/" className="has-text-grey-light">Assistance technique</Link></li>
+              <li><Link href="/AssistanceBot" className="has-text-grey-light">Assistance technique</Link></li>
               <li><Link href="/" className="has-text-grey-light">FAQ</Link></li>
               <li className="mt-2">
                 <Link href="/newsletter" className="button is-small" style={{ backgroundColor: '#E63946', color: '#fff' }}>
@@ -37,13 +39,11 @@ export default function Footer() {
           <div className="column is-12-mobile is-4-desktop mb-4">
             <h3 className="title is-6 has-text-white">Suivez-nous</h3>
             <div className="social-icons mb-2">
-              <a href="#" className="icon mr-3" style={{ color: '#E63946' }}>
+              <a href="https://www.facebook.com" className="icon mr-3" style={{ color: '#E63946' }}>
                 <i className="fab fa-facebook fa-lg"></i>
               </a>
-              <a href="#" className="icon mr-3" style={{ color: '#E63946' }}>
-                <i className="fab fa-youtube fa-lg"></i>
-              </a>
-              <a href="#" className="icon" style={{ color: '#E63946' }}>
+            
+              <a href="https://www.linkedin.com" className="icon" style={{ color: '#E63946' }}>
                 <i className="fab fa-linkedin fa-lg"></i>
               </a>
             </div>
@@ -54,11 +54,7 @@ export default function Footer() {
         </div>
 
         {/* Slogan */}
-        <div className="has-text-centered mt-5">
-          <p className="is-size-6">
-            <strong>Votre métier est de produire, le nôtre est de vous y assister.</strong>
-          </p>
-        </div>
+       
 
         {/* Légal */}
         <div style={{ backgroundColor: '#001F3F' }} className="has-text-centered p-3 mt-5">

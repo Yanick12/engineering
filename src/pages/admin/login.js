@@ -1,52 +1,49 @@
-import { signIn } from "next-auth/react"
-import { useState } from "react"
-import { useRouter } from "next/router"
+'use client'
 
-export default function AdminLogin() {
-  const router = useRouter()
-  const [form, setForm] = useState({ email: '', password: '' })
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+
+export default function Login() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const router = useRouter()
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault()
     setError('')
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password_hash }),
+      })
 
-    const res = await signIn("credentials", {
-      redirect: false,
-      email: form.email,
-      password: form.password
-    })
+      const data = await res.json()
+      if (!res.ok) return setError(data.message)
 
-    if (res.ok) {
-      router.push("/admin")
-    } else {
-      setError("Email ou mot de passe incorrect")
+      localStorage.setItem('token', data.token)
+      router.push('/admin/dashboard')
+    } catch (err) {
+      setError('Oups! Erreur lors de la connexion')
     }
   }
 
   return (
     <div className="section">
       <div className="container" style={{ maxWidth: 400 }}>
-        <h1 className="title is-4 has-text-centered has-text-primary">Connexion Admin</h1>
-        {error && <p className="notification is-danger is-light">{error}</p>}
-        <form onSubmit={handleSubmit}>
+        <h1 className="title has-text-centered">Connexion Admin</h1>
+        <form onSubmit={handleLogin}>
           <div className="field">
             <label className="label">Email</label>
-            <div className="control">
-              <input className="input" name="email" type="email" onChange={handleChange} required />
-            </div>
+            <input className="input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
           <div className="field">
             <label className="label">Mot de passe</label>
-            <div className="control">
-              <input className="input" name="password" type="password" onChange={handleChange} required />
-            </div>
+            <input className="input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
-          <button className="button is-primary is-fullwidth mt-4">Connexion</button>
+          {error && <p className="has-text-danger">{error}</p>}
+          <button className="button is-primary is-fullwidth mt-4">Se connecter</button>
         </form>
       </div>
     </div>

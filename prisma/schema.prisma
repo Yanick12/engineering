@@ -1,15 +1,70 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique(map: "Admin_email_key")
+  password  String
+  nom       String
+}
+
+model blog {
+  id        Int      @id @default(autoincrement())
+  titre     String
+  slug      String   @unique(map: "Blog_slug_key")
+  contenu   String
+  imageUrl  String?
+  auteur    String
+  published Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model contact {
+  id            Int      @id @default(autoincrement())
+  nom           String
+  sujet         String
+  message       String
+  dateReception DateTime @default(now())
+  statut        Boolean  @default(false)
+}
+
+model formation {
+  id          Int      @id @default(autoincrement())
+  titre       String
+  slug        String   @unique(map: "Formation_slug_key")
+  description String
+  dateDebut   DateTime
+  dateFin     DateTime
+  imageUrl    String?
+}
+
+model newsletter {
+  id             Int      @id @default(autoincrement())
+  email          String   @unique(map: "Newsletter_email_key")
+  dateAbonnement DateTime @default(now())
+  statut         Boolean  @default(true)
+  token          String?
+}
+
+model realisation {
+  id       Int      @id @default(autoincrement())
+  titre    String
+  details  String
+  imageUrl String?
+  date     DateTime @default(now())
+}
+
+model temoignage {
+  id              Int      @id @default(autoincrement())
+  nomClient       String
+  fonctionClient  String
+  texte           String
+  photoClientUrl  String?
+  datePublication DateTime @default(now())
 }

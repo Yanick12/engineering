@@ -53,6 +53,48 @@ export default function MontageIndustriel() {
           </div>
         </div>
       </section>
+      <section className="section has-background-light py-6">
+  <div className="container">
+    <h2 className="title is-4 has-text-primary mb-4">Notre Expertise en Montage & Transfert Industriel</h2>
+
+    <div className="content mb-5">
+      <p>
+        <strong>Solutum Engineering</strong> assure le montage global de machines spéciales ou d’installations industrielles complètes.
+        Nous réalisons également des transferts de machines, lignes de fabrication, usines ou ateliers complets.
+      </p>
+      <p>
+        <em>Un interlocuteur unique pour une maîtrise globale des prestations.</em>
+      </p>
+    </div>
+
+    <div className="columns is-variable is-6">
+      <div className="column">
+        <div className="box has-background-white">
+          <h3 className="title is-5 has-text-link">Montage industriel</h3>
+          <ul>
+            <li>• Mécanique</li>
+            <li>• Tuyauterie et chaudronnerie</li>
+            <li>• Électricité industrielle et automatisme</li>
+            <li>• Hydraulique et pneumatique</li>
+          </ul>
+        </div>
+      </div>
+      <div className="column">
+        <div className="box has-background-white">
+          <h3 className="title is-5 has-text-link">Transfert industriel</h3>
+          <ul>
+            <li>• Étude du transfert</li>
+            <li>• Débranchement et modification des réseaux fluides</li>
+            <li>• Démontage, manutention, emballage, stockage et transport</li>
+            <li>• Remise en état éventuelle des équipements</li>
+            <li>• Remontage et assistance au démarrage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <Footer />
     </>

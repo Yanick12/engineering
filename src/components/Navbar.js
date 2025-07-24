@@ -23,7 +23,8 @@ export default function Navbar() {
           position: fixed;
           top: 0;
           width: 100%;
-          background: transparent;
+          background: #001F3F;
+
           color: #001F3F; /* texte bleu foncé par défaut */
           box-shadow: none;
           
@@ -70,22 +71,26 @@ export default function Navbar() {
         }
 
         .navbar-item {
-          color: inherit;
-          font-weight: 500;
-          cursor: pointer;
-          transition: color 0.3s ease;
-          text-decoration: none;
+  color: white !important;
+  font-weight: 700; /* gras */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
         }
         .navbar-item:hover {
           color: #e63946;
         }
 
+
         .cta-button {
+
           background-color: #e63946;
           color: white;
           padding: 0.4rem 1.2rem;
           border-radius: 25px;
-          font-weight: 600;
+          font-weight: 700;
           border: none;
           cursor: pointer;
           transition: background-color 0.3s ease, box-shadow 0.3s ease;

@@ -2,9 +2,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import Nosimplantations from '../components/Nosimplantations';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import AssistanceBot from '../components/AssistanceBot';
+
 function Counter({ end, duration }) {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -30,23 +33,11 @@ function Counter({ end, duration }) {
 }
 export default function HomePage() {
   const [showPopup, setShowPopup] = useState(false);
-  // Scroll navbar effet
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 10) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+ 
   const services = [
     { title: "Montage industriel", image: "/images/montage/image3.jpg", link: "/services/montage" },
-    { title: "Gestion de projet", image: "/images/gestion_de_projet/nosMission1.jpg", link: "/services/projet" },
-    { title: "Supervision & contrôle", image: "/images/montage/image4.jpg", link: "/services/supervision" },
+    { title: "Gestion de projet", image: "/images/gestion_de_projet/nosMission1.jpg", link: "/services/gestion_projet" },
+    { title: "Supervision & contrôle", image: "/images/montage/image4.jpg", link: "/services/automatisme" },
     { title: "Formation", image: "/images/formation/image27.jpg", link: "/services/formation" }
   ];
   return (
@@ -73,11 +64,11 @@ export default function HomePage() {
           <div className="container has-text-centered has-text-white">
             
            <h1
-  className="title is-size-1-desktop is-size-3-tablet is-size-4-mobile flex-1/2"
-  style={{ color: '#ffffff' }}
->
-  L&#39;ingénierie au service de vos projets
-</h1>
+            className="title is-size-1-desktop is-size-3-tablet is-size-4-mobile flex-1/2"
+            style={{ color: '#ffffff' }}
+            >
+            L&#39;ingénierie au service de vos projets
+          </h1>
 
             <button className="button is-primary is-large is-medium mt-5">
               <Link href="/contact" className="button is-primary ">
@@ -142,13 +133,13 @@ export default function HomePage() {
   </div>
 </section>
 <section className="section has-background-light py-6">
-  <div className="container">
+  <div className="container" style={{textAlign: 'justify'}}>
     <h2 className="section-title mb-4">Pourquoi choisir Solutum Engineering ?</h2>
     <p className="has-text-centered mb-6" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>
       Issue d’une forte expérience du lien entreprise-université, Solutum Engineering offre un accompagnement complet 
       avec des solutions innovantes, fiables et adaptées aux réalités industrielles actuelles.
     </p>
-    <div className="columns is-variable is-6 is-multiline">
+    <div className="columns is-variable is-6 is-multiline" style={{textAlign: 'justify'}}>
       <div className="column is-6-tablet is-3-desktop has-text-centered fade-in">
         <span className="icon is-large has-text-primary mb-3">
           <i className="fas fa-cogs fa-3x"></i>
@@ -188,16 +179,16 @@ export default function HomePage() {
       <div className="column is-6">
         <figure className="image is-4by3 vision-img-wrapper">
         <Image
-            src="/images/gestion_de_projet/nosMission1.jpg"
-  alt="Vision industrielle"
-  width={800} // remplace par la largeur réelle ou souhaitée
-  height={600} // idem pour la hauteur
-  layout="responsive" // pour qu’elle s’adapte au conteneur
+          src="/images/gestion_de_projet/nosMission1.jpg"
+          alt="Vision industrielle"
+          width={800} 
+          height={600}
+          layout="responsive"
         />
         </figure>
       </div>
       {/* Texte vision */}
-      <div className="column is-6">
+      <div className="column is-6" style={{textAlign: 'justify'}}>
         <div className="content is-medium">
           <p>
             Chez <strong>Solutum Engineering</strong>, nous avons pour ambition d’accompagner nos clients dans la transformation
@@ -314,56 +305,14 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-<section className="section has-background-light py-6">
-  <div className="container">
-    <h2 className="section-title mb-5">Nos sites & implantations</h2>
-
-    <div className="columns is-vcentered fade-in">
-      {/* Carte ou illustration */}
-      <div className="column is-6">
-        <figure className="image is-4by3 location-img-wrapper">
-          <Image src="/images/nos_mission/image19.jpg" alt="Carte des implantations de Solutum" width={800} height={600} style={{ borderRadius: '8px' }}/>
-        </figure>
-      </div>
-      {/* Liste des sites */}
-      <div className="column is-6">
-        <ul className="content is-medium">
-          <li><strong>📍 Ngaoundéré</strong> – Siège administratif et centre de formation</li>
-          <li><strong>📍 Garoua</strong> – Bureau technique nord</li>
-          <li><strong>📍 Yaoundé</strong> – Centre de supervision et support client</li>
-          <li><strong>📍 Douala</strong> – Coordination industrielle et logistique</li>
-          <li><strong>🌍 Partenariats</strong> – Ouverture à l&#39;international pour les projets complexes</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+<Nosimplantations/>
 {/*    SECTION DES TEMOIGNAGES    */}
-<section className="section has-background-light py-6">
+<section className="section has-background-light py-25">
   <div className="container">
     <h2 className="section-title mb-5">Temoignages</h2>
     <div className="columns is-vcentered fade-in">
-      
-      {/* Liste des sites */}
-      <div className="column is-6">
-        <ul className="content is-medium">
-         <p> ici figure les temoignages  </p>
-        </ul>
-      </div>
+      <TestimonialCarousel/>
 
-      {/* Carte ou illustration */}
-      <div className="column is-6">
-        <figure className="image is-4by3 location-img-wrapper">
-          <Image
-                  src="/images/nos_mission/image19.jpg"
-  alt="Carte des implantations de Solutum"
-  width={800}
-  height={600}
-  style={{ borderRadius: '8px' }}
-  priority
-          />
-        </figure>
-      </div>
     </div>
   </div>
 </section>

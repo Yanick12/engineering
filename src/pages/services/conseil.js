@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '../../components/Navbar'
-
 import Footer from '../../components/Footer'
 
 export default function Conseil() {
@@ -39,18 +38,54 @@ export default function Conseil() {
             </div>
 
             <div className="column is-half">
-              
+              <figure className="image is-4by3" style={{ position: 'relative' }}>
+                <Image
+                  src="/images/etude_realisation/image5.jpg"
+                  alt="Conseil technique"
+                  fill
+                  style={{ borderRadius: '8px', objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 768px"
+                />
+              </figure>
+            </div>
+          </div>
 
-<figure className="image is-4by3" style={{ position: 'relative' }}>
-  <Image
-    src="/images/etude_realisation/image5.jpg"
-    alt="Conseil technique"
-    fill
-    style={{ borderRadius: '8px', objectFit: 'cover' }}
-    sizes="(max-width: 768px) 100vw, 768px"
-  />
-</figure>
+          {/* Nouvelle section ajoutée */}
+          <div className="content mt-6">
+            <p>
+              À partir du cahier des charges, une équipe prend en charge l’ensemble : <strong>ETUDE - RÉALISATION - INSTALLATION SUR SITE</strong> dans les domaines de la mécanique, de la tuyauterie, de l’hydraulique, de l’électricité et des automatismes industriels.
+            </p>
+            <p>
+              Le bureau d’études, équipé d’outils CAO/DAO, garantit une prestation de qualité en faisant preuve d’imagination, de rigueur et de professionnalisme.
+            </p>
+            <p>
+              <strong>Un partenaire indiqué pour une maîtrise globale du projet</strong>
+            </p>
 
+            <div className="columns mt-4">
+              <div className="column">
+                <h2 className="title is-5 has-text-primary">Études</h2>
+                <ul>
+                  <li>• Conception ou modification de machines spéciales ou équipements industriels,</li>
+                  <li>• Développement de process en partenariat avec le client,</li>
+                  <li>• Constitution de dossiers techniques,</li>
+                  <li>• Mise à jour de plans et documentations techniques,</li>
+                  <li>• Audit énergétique.</li>
+                </ul>
+              </div>
+
+              <div className="column">
+                <h2 className="title is-5 has-text-primary">Réalisation</h2>
+                <ul>
+                  <li>• Fabrication d’ensembles mécaniques,</li>
+                  <li>• Remise en état de machines ;</li>
+                  <li>• Montage et essais de machines spéciales ;</li>
+                  <li>• Régulation industrielle : TOR, MLI, PID et fuzzy ;</li>
+                  <li>• Installation des machines tournantes (Pompes, Compresseurs, Turbines…) ;</li>
+                  <li>• Installation de tout type de convoyeur et élévateur ;</li>
+                  <li>• Alignement d’arbre.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
