@@ -86,9 +86,9 @@ export default function NosSites() {
         <div className="container">
           <h2 className="section-title mb-5">Nos sites & implantations</h2>
 
-          <div className="columns is-vcentered">
-            <div className="column is-4" style={{ position: 'relative', maxWidth: 600 }}>
-              <figure className="image is-6by4 location-img-wrapper" style={{ position: 'relative' }}>
+          <div className="columns is-vcentered ">
+            <div className="column is-4">
+              <figure className="image is-6by4 location-img-wrapper">
                 <Image
                   src="/images/carte.jpg"
                   alt="Carte des implantations de Solutum"
@@ -96,6 +96,7 @@ export default function NosSites() {
                   height={848}
                   style={{ borderRadius: '17px' }}
                   priority
+                  layout="responsive"
                 />
 
                 {villes.map(({ nom, top, left }, idx) => (

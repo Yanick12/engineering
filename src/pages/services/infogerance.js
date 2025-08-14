@@ -16,7 +16,7 @@ export default function Infogerance() {
 
       <section className="section has-background-white py-6">
         <div className="container">
-          <h1 className="title is-3 has-text-primary mb-4">Infogérance & assistance technique</h1>
+          <h1 className="title is-3 has-text-link mb-4">Infogérance & assistance technique</h1>
           <p className="subtitle is-5 mb-5">
             Un support technique réactif, fiable et sur mesure pour garantir la continuité de vos opérations industrielles.
           </p>

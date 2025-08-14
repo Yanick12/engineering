@@ -33,7 +33,7 @@ export default function MentionsLegales() {
 
           <h2 className="title is-5">Hébergement</h2>
           <p>
-            Le site est hébergé par un prestataire tiers (à renseigner selon ton hébergeur, par exemple : Vercel, Netlify ou OVH).<br />
+            Le site est hébergé par Vercel.<br />
             Hébergeur : Vercel Inc.<br />
             Adresse : 340 S Lemon Ave #4133, Walnut, CA 91789, USA<br />
             Site web : <a href="https://vercel.com" target="_blank" rel="noreferrer">vercel.com</a>
@@ -41,20 +41,20 @@ export default function MentionsLegales() {
 
           <h2 className="title is-5">Données personnelles</h2>
           <p>
-            Aucune donnée personnelle n’est collectée sans votre consentement.<br />
+            Aucune donnée personnelle n&#39;est collectée sans votre consentement.<br />
             Les données transmises via les formulaires sont utilisées uniquement dans le cadre de la relation commerciale initiée
             par le visiteur.
           </p>
 
           <h2 className="title is-5">Cookies</h2>
           <p>
-            Ce site utilise des cookies pour améliorer l’expérience utilisateur. En continuant votre navigation, vous acceptez
+            Ce site utilise des cookies pour améliorer l&#39;expérience utilisateur. En continuant votre navigation, vous acceptez
             l&#39;utilisation de ces cookies. Vous pouvez modifier ce comportement dans les paramètres de votre navigateur.
           </p>
 
           <h2 className="title is-5">Propriété intellectuelle</h2>
           <p>
-            L’ensemble du contenu présent sur ce site (textes, images, logos, icônes) est la propriété exclusive de Solutum
+            L&#39;ensemble du contenu présent sur ce site (textes, images, logos, icônes) est la propriété exclusive de Solutum
             Engineering, sauf mention contraire. Toute reproduction, même partielle, sans autorisation est interdite.
           </p>
 

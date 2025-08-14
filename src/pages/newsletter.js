@@ -73,7 +73,7 @@ export default function NewsletterPage() {
             <div className="field">
               <div className="control">
                 <button className="button is-primary" type="submit">
-                  S’inscrire
+                  S&#39;inscrire
                 </button>
               </div>
             </div>

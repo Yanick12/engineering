@@ -16,7 +16,7 @@ export default function FormationTechnique() {
 
       <section className="section has-background-white py-6">
         <div className="container">
-          <h1 className="title is-3 has-text-primary mb-4">Formation technique</h1>
+          <h1 className="title is-3 has-text-link mb-4">Formation technique</h1>
           <div className="content is-medium" style={{ maxWidth: '800px', margin: '0 auto' }}>
             
             

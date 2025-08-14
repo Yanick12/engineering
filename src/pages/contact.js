@@ -40,7 +40,7 @@ export default function ContactPage() {
       <Navbar/>
       <section className="section has-background-white py-6">
         <div className="container">
-          <h1 className="title is-3 has-text-primary has-text-centered mb-5">Nous contacter</h1>
+          <h1 className="title is-3 has-text-link has-text-centered mb-5">Nous contacter</h1>
 
           <div className="columns is-variable is-8">
             {/* Formulaire */}

@@ -15,7 +15,7 @@ export default function Conseil() {
 
       <section className="section has-background-white py-6">
         <div className="container">
-          <h1 className="title is-3 has-text-primary mb-4">Conseil & études techniques</h1>
+          <h1 className="title is-3 has-text-link mb-4">Conseil & études techniques</h1>
           <p className="subtitle is-5 mb-5">
             Nous vous accompagnons dans vos choix stratégiques avec des études fiables, adaptées et orientées résultats.
           </p>
@@ -64,7 +64,7 @@ export default function Conseil() {
 
             <div className="columns mt-4">
               <div className="column">
-                <h2 className="title is-5 has-text-primary">Études</h2>
+                <h2 className="title is-5 has-text-link">Études</h2>
                 <ul>
                   <li>• Conception ou modification de machines spéciales ou équipements industriels,</li>
                   <li>• Développement de process en partenariat avec le client,</li>
@@ -75,7 +75,7 @@ export default function Conseil() {
               </div>
 
               <div className="column">
-                <h2 className="title is-5 has-text-primary">Réalisation</h2>
+                <h2 className="title is-5 has-text-link">Réalisation</h2>
                 <ul>
                   <li>• Fabrication d’ensembles mécaniques,</li>
                   <li>• Remise en état de machines ;</li>

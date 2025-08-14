@@ -10,7 +10,7 @@ export default function AdminServices() {
     {
       id: 1,
       title: 'Montage industriel',
-      description: 'Installation et mise en service d’équipements industriels.',
+      description: 'Installation et mise en service d&#39;équipements industriels.',
     },
     {
       id: 2,

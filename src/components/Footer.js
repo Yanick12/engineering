@@ -13,8 +13,6 @@ export default function Footer() {
             <ul>
               <li><Link href="/" className="has-text-grey-light">À propos</Link></li>
               <li><Link href="/" className="has-text-grey-light">Nos projets</Link></li>
-              <li><Link href="/" className="has-text-grey-light">Carrière</Link></li>
-              <li><Link href="/" className="has-text-grey-light">Partenaires</Link></li>
               <li><Link href="/blog" className="has-text-grey-light">Blog</Link></li>
 
             </ul>
@@ -26,10 +24,10 @@ export default function Footer() {
             <ul>
               <li><Link href="/" className="has-text-grey-light">Conditions générales</Link></li>
               <li><Link href="/AssistanceBot" className="has-text-grey-light">Assistance technique</Link></li>
-              <li><Link href="/" className="has-text-grey-light">FAQ</Link></li>
+              
               <li className="mt-2">
                 <Link href="/newsletter" className="button is-small" style={{ backgroundColor: '#E63946', color: '#fff' }}>
-                  S’abonner à la newsletter
+                  S&#39;abonner à la newsletter
                 </Link>
               </li>
             </ul>

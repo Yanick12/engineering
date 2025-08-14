@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "M. Essomba",
     role: "Chef de projet",
-    message: "Solutum a dépassé nos attentes sur le projet d’automatisation.",
+    message: "Solutum a dépassé nos attentes sur le projet d#&39;automatisation.",
   },
 ]
 
@@ -32,11 +32,10 @@ export default function TestimonialCarousel() {
   const prev = () => setIndex((index - 1 + testimonials.length) % testimonials.length)
 
   return (
-    <section className="section py-9 ">
-      <div className="container has-text-centered" style={{textAlign: 'justify'}}>
-        <h2 className="title is-8 has-text-primary">Ce que disent nos clients</h2>
-
-        <div className="" >
+    <section className="section py-6 has-text-centered">
+      <div className="container" >
+        <h2 className="title is-3 mb-4">Ce que disent nos clients</h2>
+        <div className="container" >
           <p className="is-size-9 has-text-grey-dark">"{testimonials[index].message}"</p>
           <p className="mt-4 has-text-weight-bold">{testimonials[index].name}</p>
           <p className="is-size-7 has-text-grey">{testimonials[index].role}</p>

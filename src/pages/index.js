@@ -67,7 +67,8 @@ export default function HomePage() {
             className="title is-size-1-desktop is-size-3-tablet is-size-4-mobile flex-1/2"
             style={{ color: '#ffffff' }}
             >
-            L&#39;ingénierie au service de vos projets
+            <p>le Bureau d&#39;Etude Solutum Engineering</p>
+            Au service de vos projets
           </h1>
 
             <button className="button is-primary is-large is-medium mt-5">
@@ -102,9 +103,9 @@ export default function HomePage() {
 
 <section className="section has-background-light pt-6 pb-6">
   <div className="container">
-    <h2 className="section-title mb-4">Nos domaines d’expertise</h2>
+    <h2 className="section-title mb-4">Nos domaines d&#39;expertise</h2>
     <p className="has-text-centered mb-6" style={{ maxWidth: '800px', margin: '0 auto' }}>
-      Découvrez les compétences techniques de Solutum, déployées à travers l’automatisation, la supervision, le montage industriel et la formation continue.
+      Découvrez les compétences techniques de Solutum, déployées à travers l&#39;automatisation, la supervision, le montage industriel et la formation continue.
     </p>
     <div className="columns is-multiline is-variable is-6">
       {services.map((service, index) => (
@@ -136,7 +137,7 @@ export default function HomePage() {
   <div className="container" style={{textAlign: 'justify'}}>
     <h2 className="section-title mb-4">Pourquoi choisir Solutum Engineering ?</h2>
     <p className="has-text-centered mb-6" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>
-      Issue d’une forte expérience du lien entreprise-université, Solutum Engineering offre un accompagnement complet 
+      Issue d&#39;une forte expérience du lien entreprise-université, Solutum Engineering offre un accompagnement complet 
       avec des solutions innovantes, fiables et adaptées aux réalités industrielles actuelles.
     </p>
     <div className="columns is-variable is-6 is-multiline" style={{textAlign: 'justify'}}>
@@ -145,14 +146,14 @@ export default function HomePage() {
           <i className="fas fa-cogs fa-3x"></i>
         </span>
         <h3 className="title is-5">Expertise technique</h3>
-        <p>Une équipe d’ingénieurs spécialisée dans l’automatisation, la supervision et les solutions industrielles complexes.</p>
+        <p>Une équipe d&#39;ingénieurs spécialisée dans l&#39;automatisation, la supervision et les solutions industrielles complexes.</p>
       </div>
       <div className="column is-6-tablet is-3-desktop has-text-centered fade-in">
         <span className="icon is-large has-text-primary mb-3">
           <i className="fas fa-chalkboard-teacher fa-3x"></i>
         </span>
         <h3 className="title is-5">Transfert de compétences</h3>
-        <p>Un fort lien avec les écoles d’ingénieurs et les jeunes talents, avec un rôle actif dans la formation.</p>
+        <p>Un fort lien avec les écoles d&#39;ingénieurs et les jeunes talents, avec un rôle actif dans la formation.</p>
       </div>
       <div className="column is-6-tablet is-3-desktop has-text-centered fade-in">
         <span className="icon is-large has-text-primary mb-3">
@@ -191,7 +192,7 @@ export default function HomePage() {
       <div className="column is-6" style={{textAlign: 'justify'}}>
         <div className="content is-medium">
           <p>
-            Chez <strong>Solutum Engineering</strong>, nous avons pour ambition d’accompagner nos clients dans la transformation
+            Chez <strong>Solutum Engineering</strong>, nous avons pour ambition d&#39;accompagner nos clients dans la transformation
             technologique et industrielle de leurs installations.
           </p>
           <p>
@@ -212,7 +213,7 @@ export default function HomePage() {
   <div className="fade-in">
     <h2 className="title is-3 has-text-centered mb-5">Nos valeurs</h2>
     <p className="has-text-centered mb-6" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>
-      L&#39;équipe de Solutum Engineering s’appuie sur des principes solides pour garantir la qualité, l’éthique et la performance dans tous ses projets industriels.
+      L&#39;équipe de Solutum Engineering s&#39;appuie sur des principes solides pour garantir la qualité, l&#39;éthique et la performance dans tous ses projets industriels.
     </p>
 
     <div className="columns is-multiline is-variable is-6">
@@ -242,7 +243,7 @@ export default function HomePage() {
             <i className="fas fa-star fa-2x"></i>
           </span>
           <h3 className="title is-5 mt-3">Excellence</h3>
-          <p>Nous visons l’excellence dans la conception, la réalisation et le suivi technique de nos solutions industrielles.</p>
+          <p>Nous visons l&#39;excellence dans la conception, la réalisation et le suivi technique de nos solutions industrielles.</p>
         </div>
       </div>
 
@@ -262,7 +263,7 @@ export default function HomePage() {
             <i className="fas fa-sync-alt fa-2x"></i>
           </span>
           <h3 className="title is-5 mt-3">Amélioration continue</h3>
-          <p>Chaque projet est l’occasion d’apprendre, d’évoluer et de nous adapter pour mieux servir nos partenaires.</p>
+          <p>Chaque projet est l&#39;occasion d&#39;apprendre, d&#39;évoluer et de nous adapter pour mieux servir nos partenaires.</p>
         </div>
       </div>
 
@@ -272,7 +273,7 @@ export default function HomePage() {
             <i className="fas fa-chalkboard-teacher fa-2x"></i>
           </span>
           <h3 className="title is-5 mt-3">Transfert de compétences</h3>
-          <p>Nous partageons notre savoir-faire avec les jeunes ingénieurs et les équipes locales pour bâtir l’avenir.</p>
+          <p>Nous partageons notre savoir-faire avec les jeunes ingénieurs et les équipes locales pour bâtir l&#39;avenir.</p>
         </div>
       </div>
     </div>
@@ -285,7 +286,7 @@ export default function HomePage() {
     <div className="columns is-variable is-8 has-text-centered fade-in">
       <div className="column">
         <Counter end={15} duration={10000} />
-        <p className="heading">Années d’expérience</p>
+        <p className="heading">Années d&#39;expérience</p>
       </div>
 
       <div className="column">
@@ -307,10 +308,10 @@ export default function HomePage() {
 </section>
 <Nosimplantations/>
 {/*    SECTION DES TEMOIGNAGES    */}
-<section className="section has-background-light py-25">
+<section className="section has-background-light has-text-centered py-6">
   <div className="container">
     <h2 className="section-title mb-5">Temoignages</h2>
-    <div className="columns is-vcentered fade-in">
+    <div className=" fade-in">
       <TestimonialCarousel/>
 
     </div>

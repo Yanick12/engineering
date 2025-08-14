@@ -14,7 +14,7 @@ export default function MontageIndustriel() {
 
       <section className="section has-background-white py-6">
         <div className="container">
-          <h1 className="title is-3 has-text-primary mb-4">Montage Industriel</h1>
+          <h1 className="title is-3 has-text-link mb-4">Montage Industriel</h1>
           <p className="subtitle is-5 mb-5">
             Nous assurons l’installation complète de vos équipements industriels avec rigueur, sécurité et expertise.
           </p>
@@ -55,7 +55,7 @@ export default function MontageIndustriel() {
       </section>
       <section className="section has-background-light py-6">
   <div className="container">
-    <h2 className="title is-4 has-text-primary mb-4">Notre Expertise en Montage & Transfert Industriel</h2>
+    <h2 className="title is-4 has-text-link mb-4">Notre Expertise en Montage & Transfert Industriel</h2>
 
     <div className="content mb-5">
       <p>

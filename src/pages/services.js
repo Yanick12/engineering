@@ -9,7 +9,7 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Montage industriel',
-      description: "Installation et mise en service d’équipements industriels adaptés à vos besoins.",
+      description: "Installation et mise en service d&#39;équipements industriels adaptés à vos besoins.",
       image: '/images/montage/image4.jpg',
       link: '/services/montage'
     },
@@ -55,9 +55,9 @@ export default function ServicesPage() {
 
       <section className="section has-background-white">
         <div className="container">
-          <h1 className="title is-3 has-text-centered mb-5">Nos domaines de compétences</h1>
+          <h1 className="title is-3 has-text-link mb-5">Nos domaines de compétences</h1>
           <p className="has-text-centered mb-6" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            Solutum Engineering vous accompagne dans tous vos projets industriels, de l’étude à la réalisation, en passant par l’automatisation, la formation et la gestion globale.
+            Solutum Engineering vous accompagne dans tous vos projets industriels, de l&#39;étude à la réalisation, en passant par l&#39;automatisation, la formation et la gestion globale.
           </p>
 
           <div className="columns is-multiline is-variable is-6">

@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 
 const posts = [
   {
-    title: 'L’importance de l’automatisation dans l’industrie moderne',
+    title: 'L&#39;importance de l&#39;automatisation dans l&#39;industrie moderne',
     slug: 'automatisation-industrie',
     excerpt: 'Découvrez comment les systèmes automatisés transforment les chaînes de production et améliorent la productivité.',
     date: '3 juillet 2025',
@@ -23,7 +23,7 @@ const posts = [
   {
     title: 'Pourquoi former le personnel est un investissement stratégique ?',
     slug: 'formation-investissement',
-    excerpt: 'Former ses collaborateurs, c’est renforcer la compétitivité de l’entreprise. On vous explique pourquoi.',
+    excerpt: 'Former ses collaborateurs, c&#39;est renforcer la compétitivité de l&#39;entreprise. On vous explique pourquoi.',
     date: '5 juin 2025',
     image: '/images/formation/image26.jpg',
   },
