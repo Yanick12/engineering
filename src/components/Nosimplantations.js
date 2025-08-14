@@ -120,7 +120,7 @@ export default function NosSites() {
                 <li><strong>📍 Garoua</strong> – Bureau technique nord</li>
                 <li><strong>📍 Yaoundé</strong> – Centre de supervision et support client</li>
                 <li><strong>📍 Douala</strong> – Coordination industrielle et logistique</li>
-                <li><strong>🌍 Partenariats</strong> – Ouverture à l'international pour les projets complexes</li>
+                <li><strong>🌍 Partenariats</strong> – Ouverture à l&apos;international pour les projets complexes</li>
               </ul>
             </div>
           </div>

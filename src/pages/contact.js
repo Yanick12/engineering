@@ -94,7 +94,7 @@ export default function ContactPage() {
         <h3 className="subtitle is-6 has-text-weight-semibold">Adresses spécifiques :</h3>
         <ul>
           <li>📍 Douala Bonamoussadi (face école publique)</li>
-          <li>📍 Ngaoundéré (à côté de l'école La Grâce)</li>
+          <li>📍 Ngaoundéré (à côté de l&#39;école La Grâce)</li>
         </ul>
       </div>
                 

@@ -36,7 +36,7 @@ export default function TestimonialCarousel() {
       <div className="container" >
         <h2 className="title is-3 mb-4">Ce que disent nos clients</h2>
         <div className="container" >
-          <p className="is-size-9 has-text-grey-dark">"{testimonials[index].message}"</p>
+          <p className="is-size-9 has-text-grey-dark">&quot;{testimonials[index].message}&quot;</p>
           <p className="mt-4 has-text-weight-bold">{testimonials[index].name}</p>
           <p className="is-size-7 has-text-grey">{testimonials[index].role}</p>
         </div>

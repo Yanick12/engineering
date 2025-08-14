@@ -31,7 +31,7 @@ export default function GestionProjet() {
         <div className="container">
           <div className="columns is-vcentered is-variable is-8">
             <div className="column is-6">
-              <h2 className="title is-4 has-text-link">De l'étude à la réalisation</h2>
+              <h2 className="title is-4 has-text-link">De l&#39;étude à la réalisation</h2>
               <p className="mb-4" style={{ textAlign: 'justify' }}>
                 Notre approche de gestion de projets combine méthodologie, expertise technique et innovation. Chaque projet est piloté avec des outils modernes de planification, un suivi rigoureux des délais et des coûts, et une communication constante avec nos clients.
               </p>
